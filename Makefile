@@ -26,4 +26,4 @@ postup::
 	$(CONSUL) wait
 
 test:
-	@curl -i 'localhost:5000' | grep 200
+	@curl -i '127.0.0.1:5000' | grep 200
