@@ -43,7 +43,7 @@ items:
       type: microservice
     annotations:
       serviceParams: '{
-        "apiVersions": ["v1"]
+        "prefixes": ["v1", "prebid-server"]
       }'
   spec:
     selector:
