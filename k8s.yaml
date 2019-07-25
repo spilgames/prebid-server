@@ -17,21 +17,21 @@ items:
         - name: prebid-server
           image: eu.gcr.io/spil-infra-registry/prebid-server:0000000000
           ports:
-          - containerPort: 5000
+          - containerPort: 8000
           resources:
             requests:
               cpu: 100m
-              memory: 600Mi
+              memory: 200Mi
           livenessProbe:
             httpGet:
               path: /prebid-server/static/
-              port: 5000
+              port: 8000
             initialDelaySeconds: 10
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /prebid-server/static/
-              port: 5000
+              port: 8000
             initialDelaySeconds: 10
             periodSeconds: 20
 - apiVersion: v1
@@ -52,7 +52,7 @@ items:
     ports:
     - protocol: TCP
       port: 5000
-      targetPort: 5000
+      targetPort: 8000
 - apiVersion: autoscaling/v1
   kind: HorizontalPodAutoscaler
   metadata:

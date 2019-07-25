@@ -8,6 +8,7 @@ BUILD_CREDENTIALS=true
 
 # overrides
 .ME-postup=off
+.ME-up=off
 .ME-test=off
 
 
@@ -21,9 +22,6 @@ $(.ME-ext)microservices-ext:
 	-@test "`grep microservices-ext .gitignore`" || echo "microservices-ext/" >> .gitignore
 	@make $(MAKECMDGOALS)
 
-
-postup::
-	$(CONSUL) wait
 
 test:
 	@curl -i '$(DOCKER_HOST_IP):5000' | grep 200
