@@ -43,7 +43,7 @@ items:
       type: microservice
     annotations:
       serviceParams: '{
-        "prefixes": ["prebid-server"]
+        "prefixes": ["/prebid-server"]
       }'
   spec:
     selector:
