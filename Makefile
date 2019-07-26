@@ -3,7 +3,7 @@ APP=prebid-server
 
 
 PROJECT-TYPE=other
-CONTAINER_PORTS=-p 5000:8000/tcp -p
+CONTAINER_PORTS=-p 5000:8000/tcp
 BUILD_CREDENTIALS=true
 
 # overrides
