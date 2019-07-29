@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: prebid-server-ingress
+spec:
+  rules:
+  - host: prebid-stg.spilcloud.com
+    http:
+      paths:
+      - backend:
+          serviceName: prebid-server
+          servicePort: 5000
