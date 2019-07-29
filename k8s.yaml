@@ -53,6 +53,8 @@ items:
     - protocol: TCP
       port: 5000
       targetPort: 8000
+      nodePort: 31098
+    type: NodePort
 - apiVersion: autoscaling/v1
   kind: HorizontalPodAutoscaler
   metadata:
