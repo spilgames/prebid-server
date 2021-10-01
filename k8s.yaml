@@ -68,3 +68,4 @@ items:
     minReplicas: 2
     maxReplicas: 20
     targetCPUUtilizationPercentage: 70
+
